@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Erland juego</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!--
+      Mensaje para teléfonos en posición vertical.
+      Portrait-mode message for mobile devices.
+    -->
+    <section id="rotateScreen" aria-live="polite">
+      <div class="rotateScreen__card">
+        <div class="rotateScreen__phone" aria-hidden="true">↻</div>
+        <h1>Gira tu celular</h1>
+        <p>Este juego funciona en posición horizontal.</p>
+        <button id="landscapeButton" type="button">Jugar en horizontal</button>
+      </div>
+    </section>
+
+    <main id="gameShell">
+      <canvas id="canvas1" aria-label="Juego de Orión"></canvas>
+
+      <!--
+        Controles táctiles para celular.
+        Touch controls for mobile devices.
+      -->
+      <section id="mobileControls" aria-label="Controles táctiles">
+        <div class="mobileControls__group mobileControls__movement">
+          <button
+            class="gameButton"
+            type="button"
+            data-key="ArrowLeft"
+            aria-label="Mover a la izquierda"
+          >
+            ◀
+          </button>
+          <button
+            class="gameButton"
+            type="button"
+            data-key="ArrowRight"
+            aria-label="Mover a la derecha"
+          >
+            ▶
+          </button>
+        </div>
+
+        <div class="mobileControls__group mobileControls__actions">
+          <button
+            class="gameButton gameButton--small"
+            type="button"
+            data-key="ArrowDown"
+            aria-label="Agacharse o bajar"
+          >
+            ▼
+          </button>
+          <button
+            class="gameButton gameButton--action"
+            type="button"
+            data-key="Enter"
+            aria-label="Rodar"
+          >
+            RODAR
+          </button>
+          <button
+            class="gameButton gameButton--action"
+            type="button"
+            data-key="ArrowUp"
+            aria-label="Saltar"
+          >
+            SALTAR
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Imágenes precargadas para el canvas / Preloaded canvas images -->
+    <img id="player" src="./assets/player.png" alt="" />
+    <img id="layer1" src="./assets/layer-1.png" alt="" />
+    <img id="layer2" src="./assets/layer-2.png" alt="" />
+    <img id="layer3" src="./assets/layer-3.png" alt="" />
+    <img id="layer4" src="./assets/layer-4.png" alt="" />
+    <img id="layer5" src="./assets/layer-5.png" alt="" />
+
+    <!-- Second background code start -->
+    <img id="layer1-2" src="./assets/layer-1-2.png" alt="" />
+    <img id="layer2-2" src="./assets/layer-2-2.png" alt="" />
+    <img id="layer3-2" src="./assets/layer-3-2.png" alt="" />
+    <img id="layer4-2" src="./assets/layer-4-2.png" alt="" />
+    <img id="layer5-2" src="./assets/layer-5-2.png" alt="" />
+    <!-- Second background code end -->
+
+    <img id="enemy_fly" src="./assets/enemy_fly.png" alt="" />
+    <img id="enemy_plant" src="./assets/enemy_plant.png" alt="" />
+    <img id="enemy_spider_big" src="./assets/enemy_spider_big.png" alt="" />
+    <img id="fire" src="./assets/fire.png" alt="" />
+    <img id="collisionAnimation" src="./assets/boom.png" alt="" />
+    <img id="lives" src="./assets/lives.png" alt="" />
+
+    <h1 class="orion">Orión</h1>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
